@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!--
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+    
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:theme="@style/AppTheme.Toolbar" />
+    
+        </com.google.android.material.appbar.AppBarLayout>-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/action_image_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="260dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/joinusbg" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="100dp"
+                        android:fontFamily="@font/gotham"
+                        android:gravity="center_horizontal"
+                        android:text="@string/fill_the_form"
+                        android:textColor="#F63505"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    style="@style/AppTheme.cards"
+                    android:layout_marginTop="-50dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_15"
+                        android:layout_marginTop="@dimen/_20"
+                        android:layout_marginEnd="@dimen/_15"
+                        android:layout_marginBottom="@dimen/_20"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_5"
+                            android:hint="@string/full_name"
+                            app:counterMaxLength="50"
+                            app:hintEnabled="true"
+                            app:counterEnabled="true"
+                            android:textColorHint="@color/colorAccent"
+                            app:hintTextColor="@color/colorAccent">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/editName"
+                                style="@style/edit_text_style"
+                                android:inputType="textPersonName"
+                                android:maxLines="1" />
+
+                            <requestFocus />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnName"
+                            style="@style/Button"
+                            android:text="@string/next"
+                            app:backgroundTint="@color/colorAccent" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_mobile"
+                    style="@style/AppTheme.cards"
+                    android:layout_marginTop="@dimen/_10"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#F800C853">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_15"
+                        android:layout_marginTop="@dimen/_20"
+                        android:layout_marginEnd="@dimen/_15"
+                        android:layout_marginBottom="@dimen/_20"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            app:counterMaxLength="10"
+                            app:hintEnabled="true"
+                            app:counterEnabled="true"
+                            style="@style/TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_5"
+                            android:hint="@string/mobile_number"
+                            android:textColorHint="@color/colorAccent"
+                            app:hintTextColor="@color/colorAccent">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edit_mobile"
+                                style="@style/edit_text_style"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMobile"
+                            style="@style/Button"
+                            android:text="@string/next"
+                            app:backgroundTint="@color/colorAccent" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_email"
+                    style="@style/AppTheme.cards"
+                    android:layout_marginTop="@dimen/_10"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#FFD600">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_15"
+                        android:layout_marginTop="@dimen/_20"
+                        android:layout_marginEnd="@dimen/_15"
+                        android:layout_marginBottom="@dimen/_20"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_5"
+                            android:hint="@string/email_id"
+                            android:textColorHint="@color/colorAccent"
+                            app:hintTextColor="@color/colorAccent"
+                            app:counterMaxLength="50"
+                            app:hintEnabled="true"
+                            app:counterEnabled="true">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edit_email"
+                                style="@style/edit_text_style"
+                                android:inputType="textEmailAddress"
+                                android:maxLines="1" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnEmail"
+                            style="@style/Button"
+                            android:text="@string/next"
+                            app:backgroundTint="@color/colorAccent" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_message"
+                    style="@style/AppTheme.cards"
+                    android:layout_marginTop="@dimen/_10"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#00BFA5">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_15"
+                        android:layout_marginTop="@dimen/_20"
+                        android:layout_marginEnd="@dimen/_15"
+                        android:layout_marginBottom="@dimen/_20"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            app:counterMaxLength="244"
+                            app:hintEnabled="true"
+                            app:counterEnabled="true"
+                            style="@style/TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_5"
+                            android:hint="@string/message"
+                            android:textColorHint="@color/colorAccent"
+                            app:hintTextColor="@color/colorAccent">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edit_message"
+                                style="@style/edit_text_style"
+                                android:inputType="textMultiLine"
+                                android:maxLines="5" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnSubmit"
+                            style="@style/Button"
+                            android:text="@string/submit"
+                            app:backgroundTint="@color/colorAccent" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
